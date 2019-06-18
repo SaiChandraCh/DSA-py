@@ -1,5 +1,4 @@
-from src.list import LinkedList
-
+from List.LinkedList import LinkedList
 
 def input():
     obj = LinkedList()
@@ -7,12 +6,16 @@ def input():
     obj.insert(9)
     obj.insert(1)
     obj.insert(6)
-    obj.insert(7)
+    obj.insert(7,2)
     obj.insert(0)
     obj.insert(3)
 
     obj.print()
-    obj.delete(0)
+    # obj.delete(0)
+    # obj.print()
+
+    # print(obj.size())
+    obj.reverse()
     obj.print()
 
-    obj.size()
+input()
