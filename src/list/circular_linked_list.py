@@ -28,6 +28,7 @@ class circular_linked_list:
             self.__tail.next = self.__head
         self.__length += 1
 
+
     def append(self,val):
         temp = Node(val)
         if self.__tail:
