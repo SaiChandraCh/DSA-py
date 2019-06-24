@@ -1,4 +1,4 @@
-from List.LinkedList import LinkedList
+from list.linked_list import LinkedList
 
 def input():
     obj = LinkedList()

@@ -1,6 +1,6 @@
 from list.Node import Node
 
-class circular_linked_list:
+class CircularLinkedList:
     __head = None
     __tail = None
     __length = 0
