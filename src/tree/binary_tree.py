@@ -69,7 +69,16 @@ class BinaryTree:
             return None
 
     def levelOrder(self,head):
-        pass
+        queue = []
+        queue.append(head)
+        while queue:
+            curr = queue.pop(0)
+            print(curr.val)
+            if curr.left:
+                queue.append(curr.left)
+            if curr.right:
+                queue.append(curr.right)
+
 
     def zigZagOrder(self,head):
         pass
