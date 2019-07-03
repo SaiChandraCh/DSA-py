@@ -81,4 +81,22 @@ class BinaryTree:
 
 
     def zigZagOrder(self,head):
-        pass
+        stack1 = []
+        stack2 = []
+        stack1.append(head)
+        while stack1 or stack2:
+            while stack1:
+                temp = stack1.pop()
+                print(temp.val)
+                if temp.left:
+                    stack2.append(temp.left)
+                if temp.right:
+                    stack2.append(temp.right)
+
+            while stack2:
+                temp = stack2.pop()
+                print(temp.val)
+                if temp.right:
+                    stack1.append(temp.right)
+                if temp.left:
+                    stack1.append(temp.left)
