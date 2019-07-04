@@ -1,10 +1,18 @@
-from tree import node
 from tree.node import Node
+from stack.stack import peek
 
 class BinaryTree:
+    __root = None
+
+    def __init__(self,val):
+        __root = Node(val)
+
+    def insert(self,val):
+        curr = self.__root
+        prev = None
 
     """DLR"""
-    def preOrder(self, head):
+    def pre_order(self, head):
         stack = []
         stack.append(head)
         while stack:
@@ -16,7 +24,7 @@ class BinaryTree:
                 stack.append(curr.left)
 
     """LDR"""
-    def inOrder(self,head):
+    def in_order(self,head):
         stack = []
         curr = head
         while True:
@@ -31,7 +39,7 @@ class BinaryTree:
                 break
 
     """LRD"""
-    def postOrder(self,head):
+    def post_order(self,head):
         stack = []
         visited = None
         curr = head
@@ -50,25 +58,17 @@ class BinaryTree:
                     stack.append(curr)
                     curr = curr.left
             elif stack:
-                top = self.peek(stack)
+                top = peek(stack)
                 if top.right and top.right != visited:
                     curr = top.right
                 else:
                     visited = stack.pop()
                     print(visited.val)
-                    curr = self.peek(stack)
+                    curr = peek(stack)
             else:
                 break
 
-
-    def peek(self,stack) -> node:
-        length = len(stack)
-        if length > 0:
-            return stack[len(stack)-1]
-        else:
-            return None
-
-    def levelOrder(self,head):
+    def level_order(self,head):
         queue = []
         queue.append(head)
         while queue:
@@ -80,7 +80,7 @@ class BinaryTree:
                 queue.append(curr.right)
 
 
-    def zigZagOrder(self,head):
+    def zig_zag_order(self,head):
         stack1 = []
         stack2 = []
         stack1.append(head)
