@@ -30,7 +30,13 @@ class BinarySearchTree:
         return False
 
     def search(self):
-        pass
+        print(self.__root)
 
     def delete(self):
-        pass
+        self.__root = 5
+        print("hello")
+
+
+# if __name__ == '__main__':
+#     BinarySearchTree.delete(BinarySearchTree)
+#     BinarySearchTree.search(BinarySearchTree)

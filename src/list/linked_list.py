@@ -1,3 +1,5 @@
+from list.node import Node
+
 class LinkedList:
     head = None
     _length = 0
@@ -13,7 +15,7 @@ class LinkedList:
             temp.next = Node(val)
         self._length += 1
 
-    def insert(self, val, index=0):
+    def insert(self, val, index = 0):
         if not self.head:
             self.head = Node(val)
         elif index == 0:

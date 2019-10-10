@@ -1,9 +1,11 @@
 from tree.BST.binary_search_tree import BinarySearchTree
 from tree.binary_tree.binary_tree import BinaryTree
+from tree.heap.heap import Heap
 
 if __name__ == '__main__':
 
-    tree = BinarySearchTree(15)
+    # tree = BinarySearchTree(15)
+    tree = Heap(15)
     tree.insert(68)
     tree.insert(30)
     tree.insert(28)
@@ -20,7 +22,8 @@ if __name__ == '__main__':
     tree.insert(91)
     tree.insert(136)
 
-    BinaryTree.level_order(BinaryTree,tree.get_root())
+    tree.print()
+    # BinaryTree.level_order(BinaryTree,tree.get_root())
 
 
 
